@@ -9,12 +9,12 @@ const LeftBlock =()=> {
       <Div mw="650px" mxw="650px">
                    <form>
                         <Div mb="70px">
-                            <DivMedia id="aboutYou2">
+                            <DivMedia >
                             <H1>TELL US A BIT ABOUT YOU</H1>
                             <DescriptionMedia >Please tell us a little bit about you.</DescriptionMedia>
                             <br/>
-                            <PMedia id="titlename">Title and First Name</PMedia>
-                            <Div id="titleNameFlex">
+                            <PMedia >Title and First Name</PMedia>
+                            <Div >
                                 
                                     <Select >
                                       <option value="0">Mr.</option>
@@ -23,10 +23,10 @@ const LeftBlock =()=> {
                                      
                                     </Select>
                                     <Carret>^</Carret>
-                                <NameInput id="nameInput" type="text" required/>
+                                <NameInput  type="text" required/>
                             </Div>
-                            <Div id="lastnameDiv">
-                                <DescriptionMedia mb="-20px" id="lastnamep" >Last Name</DescriptionMedia>
+                            <Div>
+                                <DescriptionMedia mb="-20px"  >Last Name</DescriptionMedia>
                           
                                 <Lastname  type="text" placeholder=" "/>
                             </Div>
