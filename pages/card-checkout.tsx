@@ -27,7 +27,7 @@ React.useEffect(() => {
 
    return (
       <>
-      <BackGround zoom={(100-((1669600-(width*height))/40000))/100 >.875?0:(100-((1669600-(width*height))/40000))/100}
+      <BackGround zoom={(100-((1611600-(width*height))/40000))/100 >.875?0:(100-((1611600-(width*height))/40000))/100}
       >
       <Pattern>
       <Nav>

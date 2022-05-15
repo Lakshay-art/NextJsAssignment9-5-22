@@ -112,10 +112,10 @@ color:black;
     }
 `
 const BackGround=styled.div<bg>`
-background-image:url("/BackGround.png") ;
-margin:0px;  
-background-size:cover;
-background-repeat:no-repeat;
+// background-image:url("/BackGround.png") ;
+// margin:0px;  
+// background-size:cover;
+// background-repeat:no-repeat;
 color: white;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 transform:scaleX(1.05);
@@ -184,8 +184,8 @@ zoom:200%;
     overflow-y: hidden;
    }
 :checked:after {
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
     border-radius: 15px;
     //top: -2px;
     //left: -.5px;  
@@ -197,8 +197,8 @@ zoom:200%;
     visibility: visible;
   }
 :not(:checked):after {
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
     border-radius: 15px;
     //top: -2px;
    //left: -.5px;
