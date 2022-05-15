@@ -34,7 +34,7 @@ const Test: (props: Paymentprops) => JSX.Element = ({title,image,value,checked,d
                                         {/* <!-- <Button>PAY $10</Button> --> */}
                                     </div>
                                 </Flex>
-                                <Radio type="radio" value={value}id={value} name="paymentmethod" checked={checked}/>
+                                <Radio type="radio" value={value}id={value} name="paymentmethod" defaultChecked={checked}/>
                                 <Label htmlFor={value}><Button id="sButton">PAY $10</Button></Label>
                             </Flex2>
          </Div>
