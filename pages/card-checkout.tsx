@@ -4,10 +4,10 @@ import Image from 'next/image';
 import { NextPage } from 'next';
 import { BackGround, Div, Flex, FlexMedia, Nav, Pattern } from '../lib/emotions';
 import React from 'react';
-import { css } from '@emotion/react';
+
 const Test:NextPage = () => {
 
-   const [width, setWidth] = React.useState(1260);
+  const [width, setWidth] = React.useState(1260);
   const [height, setHeight] = React.useState(545.6);
   React.useEffect(() => {
   window.addEventListener("resize", () => setWidth(window.innerWidth));})
@@ -27,7 +27,8 @@ React.useEffect(() => {
 
    return (
       <>
-      <BackGround zoom={(100-((1661600-(width*height))/40000))/100 >.875?0:(100-((1661600-(width*height))/40000))/100}>
+      <BackGround zoom={(100-((1669600-(width*height))/40000))/100 >.875?0:(100-((1669600-(width*height))/40000))/100}
+      >
       <Pattern>
       <Nav>
          <Div ml="-10px">

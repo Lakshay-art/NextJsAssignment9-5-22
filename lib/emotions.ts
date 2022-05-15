@@ -19,13 +19,14 @@ type div={
     padding?:string;
     bgc?:string;
     margin?:string;
- width?:string;
- height?:string;
- bg?:string;
- transform?:string;
- ml?:string;
- pos?:string;
- fs?:string;
+    width?:string;
+    height?:string;
+    bg?:string;
+    transform?:string;
+    ml?:string;
+    pos?:string;
+    fs?:string;
+    zoom?:string;
  
 
 }
@@ -37,15 +38,16 @@ type p={
   transform?:string;
 }
 type flexx={
- justify?:string;
- align?:string;
- mt?:string;
- mw?:string;
- gap?:string;
- width?:string;
- margin?:string;
- ml?:string;
- media?:string
+  justify?:string;
+  align?:string;
+  mt?:string;
+  mw?:string;
+  gap?:string;
+  width?:string;
+  margin?:string;
+  ml?:string;
+  media?:string;
+  mxw?:string
 }
 // const media680=css`
 // @media(max-width:680px){
@@ -75,13 +77,14 @@ letter-spacing: 1px;
 }
 `
 const p=css`
-font-size:16px;
+  font-size:16px;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   word-spacing: 1px;
 
   font-weight: 200;
   margin:10px 0px;
 `
+
 const Pattern=styled.div`
 background-image:url("/Pattern.png") ;
   
@@ -101,6 +104,12 @@ color:black;
   transform: translate(-250px,70px);
   margin: 20px;
   margin-left: -270px;
+  @media  ( max-width:520px) {
+   // max-width:500px;
+     margin-left:-200px;
+  transform: translate(-130px,70px);
+
+    }
 `
 const BackGround=styled.div<bg>`
 background-image:url("/BackGround.png") ;
@@ -131,6 +140,7 @@ margin: 0px;
 `
 const Label=styled.label`
 height:120px;
+
 `
 const NameInput=styled.input`
 ${input}
@@ -146,13 +156,14 @@ ${input}
     margin-top: 30px;
     transition: ease-in-out ,margin-top .7s;   
   }
-:not(:placeholder-shown){
-    margin-top: 30px;
- }  
+
  :not(:focus){
     margin-top: -20px;
     transition: ease-in-out ,margin-top .7s;
-  }
+  } 
+  :not(:placeholder-shown){
+    margin-top: 30px;
+ }  
 `
 
 const Radio=styled.input`
@@ -173,12 +184,12 @@ zoom:200%;
     overflow-y: hidden;
    }
 :checked:after {
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
     border-radius: 15px;
     //top: -2px;
-    //left: 1px;  
-    transform: translate(.5px,0.5px);
+    //left: -.5px;  
+    //transform: translate(.5px,0.5px);
     position: relative;
     background-color: #10FFC6;
     content: '';
@@ -186,12 +197,12 @@ zoom:200%;
     visibility: visible;
   }
 :not(:checked):after {
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
     border-radius: 15px;
     //top: -2px;
-   //left: 1px;
-    transform: translate(.5px,0.5px);
+   //left: -.5px;
+   // transform: translate(.5px,0.5px);
     position: relative;
     background-color: #22498a;
     content: '';
@@ -265,7 +276,7 @@ transform:${props=>props.transform};
 font-size:${props=>props.fs};
 position:${props=>props.pos};
 margin-left:${props=>props.ml};
-
+zoom:${props=>props.zoom};
 
 `
 const DivMedia=styled.div<div>`
@@ -301,6 +312,7 @@ margin:${props=>props.margin};
 margin-top:${props=>props.mt};
 flex-wrap:nowrap;
 min-width:${props=>props.mw};
+max-width:${props=>props.mxw};
 margin-left:${props=>props.ml};
 
 
@@ -308,6 +320,24 @@ margin-left:${props=>props.ml};
 
 
 `
+export const Flex2=styled.div<flexx>`
+display:flex;
+justify-content:${props=>props.justify};
+align-items:${props=>props.align};
+gap:${props=>props.gap};
+width:${props=>props.width};
+margin:${props=>props.margin};
+margin-top:${props=>props.mt};
+flex-wrap:nowrap;
+min-width:${props=>props.mw};
+max-width:${props=>props.mxw};
+margin-left:${props=>props.ml};
+
+@media  ( max-width:520px) {
+max-width:400px;
+ margin-left:60px;
+}
+ `
 const FlexMedia=styled.div<flexx>`
 display:flex;
 justify-content:${props=>props.justify};
@@ -338,34 +368,30 @@ margin-left:${props=>props.ml};
 //)
 
 const Select=styled.select`
-width: 60px;
+  width: 60px;
   padding: 5px;
   font-size: 15px;
   line-height: 1;
   border: 0;
   border-radius: 0;
   height: 34px;
-
   font-family:helvetica-roman;
   color:#ffffff;   
-   background-color: rgba(0, 0, 0, 0);
-   -webkit-appearance: none;
-   border: none;
-   text-indent: 0.01px;
-   text-overflow: '';
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+  border: none;
+  text-indent: 0.01px;
+  text-overflow: '';
   z-index: 100;
   outline: none;
   position: relative;
 `
 const Carret=styled.span`
-position: absolute;
+   position: absolute;
    margin-left: 0px;
    margin-bottom: 0px;
    transform: translate(-20px,14px) scale(1.1,1.2);
 `
-// export const Text=styled.p <Types>`
-// color:${props=>props.color}
-// padding:${props=>props.padding}
-// `
+
 export default Button;
 export {Button,H1,H2,H3,H4,NameInput,P,PMedia,Nav,Label,Radio,Div,DivMedia,Flex,Lastname,Select,Description,DescriptionMedia,Carret,Pattern,BackGround,FlexMedia};
